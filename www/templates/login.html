@@ -1,0 +1,125 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">Login</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeLogin()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <form ng-submit="doLogin()" style="display:none;"><input type="text" ng-model="loginData.username">
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Username</span>
+          <input type="text" ng-model="loginData.username">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Password</span>
+          <input type="password" ng-model="loginData.password">
+        </label>
+        <label class="item">
+          <button class="button button-block button-positive" type="submit">Log in</button>
+        </label>
+      </div>
+    </form>
+    
+    <!--Login circle start-->
+    
+    <div class="album-circle-contaner">
+    
+        <!--Photo album circle container start-->
+        <div class="photo-album-circle-contaner"  ng-controller="PopupCtrl">
+          <img src="img/circle-bg.png">
+          
+         
+
+          <div id="#2">
+              <a href="#/app/browse">
+              <div class="photo-display-topmiddle">
+                 <img src="img/facebook-icon.png">
+                 
+              </div></a>
+          </div>
+          
+          <div id="#3">
+              
+              <div class="photo-display-leftmiddle"  ng-click="showLeft()">
+                 <img src="img/twitter-icon.png">
+                 
+              </div>
+          </div>
+          
+          <div id="#4">
+              
+              <div class="photo-display-rightmiddle"  ng-click="showAlert()">
+                 <img src="img/user-icon.png">
+                 
+              </div>
+          </div>
+          
+          <div id="#5">
+              
+              <div class="photo-display-bottommiddle"  ng-click="showAlert()">
+                 <img src="img/google-plus-icon.png">
+                 
+              </div>
+          </div>
+          
+          <!--
+          <div id="#1">
+              
+              <div class="photo-display-topleft">
+                 <img src="img/1.jpg">
+                   
+              </div>          
+          </div>
+          
+          
+          <div id="#6">
+              
+              <div class="photo-display-topright">
+                 <img src="img/6.jpg">
+                 
+              </div>
+          </div>
+          
+          <div id="#7">
+              
+              <div class="photo-display-bottomleft">
+                 <img src="img/7.jpg">
+                 
+              </div>
+              
+          </div>
+          
+          <div id="#8">
+              
+              <div class="photo-display-bottomright">
+                 <img src="img/8.jpg">
+              </div>
+              
+          </div>-->
+          
+          <div id="#center">
+              
+              <div style="background:none" class="photo-display-middle circle">
+                 <img src="img/center-icon.png">
+              </div>
+              
+          </div>
+          
+          
+        </div>
+        <!--Photo album circle container end-->
+    
+    </div>
+    <!--Login circle end-->
+    
+    <!--<div ng-controller="PopupCtrl">
+    <button class="button button-dark" ng-click="showAlert()">Sample Alert</button><img  ng-click="showAlert()" src="img/9.jpg">
+
+    </div>
+-->    
+
+
+  </ion-content>
+</ion-modal-view>

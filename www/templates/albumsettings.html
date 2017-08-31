@@ -1,0 +1,35 @@
+<ion-view view-title="Album Settings">
+   <ion-content>
+       
+    <form >
+      <div class="list">
+          
+        <label class="item item-input">
+          <span class="input-label">Album Name</span>
+          <input type="text" ng-model="albumsettings.albumname"> 
+        </label>
+         
+       
+        
+           
+        <label class="item">
+       
+          <button class="button button-block button-positive"  ng-click="addAlbumSettings()" type="button">Add Album</button>
+        </label>
+      </div>
+           
+    </form> 
+     
+     
+       
+       <div> <h4 style="text-align: center">Album List</h4></div>
+       <form ng-init="getAlbumList()" >
+       
+       <div class="list">
+           <label ng-repeat="album in albumlist" class="item">{{album.name}}</label> 
+           
+       </div> 
+      </form> 
+    
+  </ion-content>
+</ion-view>

@@ -1,0 +1,76 @@
+<ion-view view-title="Add Family Member" >
+    
+  <ion-content >
+      <div ng-controller="HomeCtrl">   
+      <div  class="button-bar headertopdown" ng-init="relative=true;" >
+          
+          <a class="button button-positive" ng-click="relative=true;">Family member</a>
+          <a class="button button-energized"  ng-click="backToHome()">Close</a>
+          
+     </div> 
+      <p>&nbsp;</p> 
+      
+      
+      
+     <form ng-show="relative">
+      <div class="list">
+          
+          
+        <label>
+              <span style="padding-left: 15px;">Select Family Member</span>
+              <input style="padding-left: 15px;" type="text" ionic-autocomplete="{items: items, onSelect:onSelect}" placeholder="Search Family Member ?" ng-model="search"/>
+         
+          </label>  
+             
+          
+        <label class="item item-select">
+          <span class="input-label">Relation</span>
+          <select style="text-align: left" id="relationId" ng-model="relativeData.relationId" >
+              <option value="1"> Father </option>
+              <option value="2"> Mother </option>
+               <option value="5"> Brother </option>
+                <option value="3"> Wife </option>
+                 <option value="4"> Son </option>
+                 <option value="6"> Son </option>
+                 
+                 <option value="7"> Uncle </option>
+                 <option value="8"> Aunt </option>
+                 <option value="9"> Nephew </option>
+                  <option value="10"> Niece </option>
+                  <option value="11"> Cousin </option>
+                 
+                 
+          </select>
+          
+          
+        </label>
+        
+         
+       
+        
+               
+       
+        
+        <label class="item">
+          <button class="button button-block button-positive"  ng-click="addRelative()" type="button">Add Family Member</button>
+        </label>
+      </div>
+       <input type="hidden" id="relativeUserId" ng-model="relativeData.relativeUserId" value="gggggggggg" >    
+    </form>    
+     
+      
+       <div> <h4 style="text-align: center">List</h4></div>
+       <form >
+       
+       <div class="list">
+           
+           <div class="item" ng-repeat="relative in relatives" ng-click="alert('hi');" > <label ng-show="relative.firstName" > <img style="width:20% !important; vertical-align: top;padding-right: 30px;" src="http://siliconvalleynest.com/familykoolapi/uploaddata/profile/{{relative.userPicture}}"> {{relative.firstName}}  <span style="text-align: right;padding-left:40%;padding-right: 0px; vertical-align: top;cursor: pointer;" > <i ng-click="removeRelative(relative.relativeId);"  class="icon ion-android-cancel"></i></span> </label> </div>
+           
+       </div> 
+      </form> 
+      
+      
+      
+   </div> 
+  </ion-content>
+</ion-view>

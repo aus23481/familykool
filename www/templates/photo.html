@@ -1,0 +1,29 @@
+<ion-view view-title="<img class='title-image' src='img/familykool-logo.png' />" hide-nav-bar="true"  >
+   <ion-content>
+     
+    
+    <div class="row row-center">
+      <div class="col col-center">
+        <h1 ng-show="expression" style="text-transform: uppercase;" class="title ">{{expression}}</h1>
+      </div>
+    </div>
+    <div class="row">
+      <img data-ng-src="{{imgURI}}" class="selfie" width="256px" height="371px"/>
+    </div>
+      
+ 
+   <div class="row" ng-show="age"> Age: {{age}}</div>
+   <div class="row" ng-show="gender"> Gender: {{gender}}</div>   
+   <div class="row" ng-show="glasses"> Glasses: {{glasses}}</div>
+   <div class="row" ng-show="text"> Desc: {{text}}</div>   
+    
+      
+      
+
+       
+       
+  </ion-content>
+</ion-view>
+
+
+

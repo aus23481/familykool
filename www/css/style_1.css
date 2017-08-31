@@ -1,0 +1,412 @@
+/* Empty. Add your own CSS if you like */
+/* Empty. Add your own CSS if you like */
+
+.has-header {top: 15% !important;}
+
+.album-circle-contaner{width:80%; 
+                       margin:0 auto; 
+					   margin-top:20%;}
+
+.photo-album-circle-contaner {
+								border: 1px solid #ccc;
+								border-radius: 50%;
+								/*padding: 15%;*/
+								position: relative;
+								width: 100%;
+								}								
+
+.circle {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: powderblue;
+		color: #333;
+		border-radius: 50%;
+		box-sizing: border-box;
+		text-align: center;
+		display: block;
+		padding: 5px;
+		}
+
+.photo-display-topleft {
+						left: 5%;
+						position: absolute;
+						top: 8%;
+						width:20%;
+						border-radius: 50%;
+						}
+
+.photo-display-topright {
+						position: absolute;
+						right: 5%;
+						top: 8%;
+						width:20%;
+						border-radius: 50%;
+						}
+
+.photo-display-bottomleft {
+							bottom: 8%;
+							left: 5%;
+							position: absolute;
+							width:20%;
+							border-radius: 50%;
+							}
+
+.photo-display-bottomright {
+							bottom: 8%;
+							position: absolute;
+							right: 5%;
+							width:20%;
+							border-radius: 50%;
+							}
+
+.photo-display-middle {
+						bottom: 35%;
+						top:35%;
+						left: 0;
+						right:0;
+						position: absolute;
+						text-align: center;
+						width: 30%;
+						margin:0 auto;
+						border-radius: 50%;
+						}
+						
+						
+/**/	
+
+.photo-display-topmiddle{
+						left: 40%;
+						top: -8%;
+						position: absolute;
+						width:20%;
+						border-radius: 50%;
+						}				
+
+.photo-display-leftmiddle{
+						left: -9%;
+						top: 40%;
+						position: absolute;
+						width:20%;
+						border-radius: 50%;
+						}
+
+.photo-display-rightmiddle{
+						right: -9%;
+						top: 40%;
+						position: absolute;
+						width:20%;
+						border-radius: 50%;
+						}	
+						
+.photo-display-bottommiddle{
+						right: 40%;
+						bottom: -8%;
+						position: absolute;
+						width:20%;
+						border-radius: 50%;
+						}
+																					
+						
+.album-circle-contaner img{width:100%; 
+                           border-radius: 50%;}	
+						   
+.photo-album-circle-contaner span{font-size:12px; font-weight:bold;}						   
+						   
+						   
+/**********For hover with relation and name start*************/		
+
+.photo-relation{top:-20%; position:absolute;}
+
+.photo-name{bottom:-20%; position:absolute;}				   
+
+.photo-display-topleft .mask, .photo-display-topmiddle .mask, .photo-display-leftmiddle .mask, .photo-display-rightmiddle .mask, .photo-display-bottommiddle .mask, .photo-display-topright .mask, .photo-display-bottomleft .mask, .photo-display-bottomright .mask{
+   opacity: 0;
+   overflow:visible;
+   box-sizing:border-box;
+   transition: all 0.4s ease-in-out;
+}
+
+.photo-display-topleft span, .photo-display-topmiddle span, .photo-display-leftmiddle span, .photo-display-rightmiddle span, .photo-display-bottommiddle span, .photo-display-topright span, .photo-display-bottomleft span, .photo-display-bottomright span {
+   opacity: 0;
+   transition: opacity 0.5s 0s ease-in-out;
+   font-size:12px;
+}
+
+.photo-display-topleft:hover .mask, .photo-display-topmiddle:hover .mask, .photo-display-leftmiddle:hover .mask, .photo-display-rightmiddle:hover .mask, .photo-display-bottommiddle:hover .mask, .photo-display-topright:hover .mask, .photo-display-bottomleft:hover .mask, .photo-display-bottomright:hover .mask {
+   opacity: 1;
+}
+
+.photo-display-topleft:hover span, .photo-display-topmiddle:hover span, .photo-display-leftmiddle:hover span, .photo-display-rightmiddle:hover span, .photo-display-bottommiddle:hover span, .photo-display-topright:hover span, .photo-display-bottomleft:hover span, .photo-display-bottomright:hover span {
+   opacity:1;
+   transition-delay: 0.3s;
+   white-space:nowrap;
+}					   
+
+/**********For hover with relation and name end*************/	
+
+/****All circle photo counter start*****/
+
+.circle-count-8{position: absolute; 
+                z-index: 1; 
+				left: 18%; 
+				top: 23%; 
+				font-size: 12px; 
+				background: rgb(204, 204, 204) none repeat scroll 0% 0%; 
+				padding: 4%; 
+				border-radius: 50%;}
+
+.circle-count-1{position: absolute; 
+                z-index: 1; 
+				left: 45%; 
+				top: 9%; 
+				font-size: 12px; 
+				background: rgb(204, 204, 204) none repeat scroll 0% 0%; 
+				padding: 4%; 
+				border-radius: 50%;}
+
+.circle-count-7{position: absolute; 
+                z-index: 1; 
+				left: 8%; 
+				bottom: 45%; 
+				font-size: 12px; 
+				background: rgb(204, 204, 204) none repeat scroll 0% 0%; 
+				padding: 4%; 
+				border-radius: 50%;}
+
+.circle-count-3{position: absolute; 
+                z-index: 1; 
+				right: 8%; 
+				bottom: 45%; 
+				font-size: 12px; 
+				background: rgb(204, 204, 204) none repeat scroll 0% 0%; 
+				padding: 4%; 
+				border-radius: 50%;}
+
+.circle-count-5{position: absolute; 
+                z-index: 1; 
+				right: 45%; 
+				bottom: 9%; 
+				font-size: 12px; 
+				background: rgb(204, 204, 204) none repeat scroll 0% 0%; 
+				padding: 4%; 
+				border-radius: 50%;}
+
+.circle-count-2{position: absolute; 
+                z-index: 1; 
+				right: 18%; 
+				top: 23%; 
+				font-size: 12px; 
+				background: rgb(204, 204, 204) none repeat scroll 0% 0%; 
+				padding: 4%; 
+				border-radius: 50%;}
+
+.circle-count-6{position: absolute; 
+                z-index: 1; 
+				left: 20%; 
+				bottom: 22%; 
+				font-size: 12px; 
+				background: rgb(204, 204, 204) none repeat scroll 0% 0%; 
+				padding: 4%; 
+				border-radius: 50%;}
+
+.circle-count-4{position: absolute; 
+                z-index: 1; 
+				right: 20%; 
+				bottom: 22%; 
+				font-size: 12px; 
+				background: rgb(204, 204, 204) none repeat scroll 0% 0%; 
+				padding: 4%; 
+				border-radius: 50%;}
+				
+.circle-count-9{position: absolute; 
+                z-index: 1; 
+				right: 40%; 
+				top: 30%; 
+				font-size: 12px; 
+				background: rgb(204, 204, 204) none repeat scroll 0% 0%; 
+				padding: 4%; 
+				border-radius: 50%;}				
+/****All circle photo counter end*****/
+
+.hm-post-cont{margin: 10% auto 5%; 
+              width: 95%;}
+
+
+/*******Album & posting container start********/
+.album-posting-cont-wrap{width:100%;}
+
+.album-posting-cont{width:95%; 
+                    margin:0 auto; 
+					border:1px solid #ccc; 
+					border-radius:10px;}
+/*left*/
+.album-cont{float:left; 
+            width:30%; 
+			padding:2%;}
+
+.album-div{padding-bottom: 5%; 
+           margin-bottom: 5%; 
+		   border-bottom: 1px solid #ccc; 
+		   font-size:12px; 
+		   line-height:1.8; 
+		   color:#333;}
+/*left*/
+
+/*right*/
+.posting-cont{float:right; 
+              border-left:1px solid #ccc; 
+			  width:70%; 
+			  padding:2%;}
+
+.posting-div{padding-bottom: 5%; 
+             margin-bottom: 5%; 
+			 border-bottom: 1px solid #ccc; 
+			 font-size:12px; 
+			 line-height:1.2; 
+			 color:#333;}
+
+.posting-div-last{padding-bottom: 5%; 
+                  margin-bottom: 5%; 
+				  font-size:12px; 
+				  line-height:1.2; 
+				  color:#333;}
+
+/*right*/
+
+.clearfix{clear:both;}
+
+/*******Album & posting container end********/
+
+.circle:hover {
+    transform: scale(1.2,1.2) rotate(360deg) scale(1,1);
+    transition: transform .5s;
+    cursor: pointer;
+
+}
+
+.rotate {
+    transform: scale(1.2,1.2) rotate(360deg) scale(1,1);
+    transition: transform .5s;
+    cursor: pointer;
+
+}
+
+
+.hide{
+    display: none !important;
+}
+
+
+img{
+    width: 100%;
+}
+
+/*IONIC Wheel */
+
+ion-wheel {
+  //position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  margin-top: 25%;
+  
+}
+
+
+
+#ionic-wheel {
+  position: relative;
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  border: .5px solid #fff;
+  margin:0 auto;
+  margin-top:3%;
+  
+}
+
+
+#ionic-wheel .circle.active {
+  top: calc(50% - 25px) !important;
+  left: calc(50% - 25px) !important;
+  opacity: 0;
+  transition-property: opacity, left, top;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+  z-index: 9;
+}
+
+#ionic-wheel .circle {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+ /* background-color: #B2542D;
+  box-shadow: 0px 2px 0px #69311A;
+  box-sizing: border-box;*/
+  border-radius: 50%;
+  opacity: 1;
+  transition-property: opacity, left, top;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-out;
+}
+
+#ionic-wheel #activate {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  margin: 0 auto;
+  transform: translate(-50%, -50%) scale(1.8, 1.8);
+  top: 50%;
+  left: 50%;
+  background-color: powderblue;
+  border-radius: 50%;
+  z-index: 10;
+  padding: 5px;
+}
+
+#ionic-wheel .circle i, #ionic-wheel #activate i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 20px;
+}
+
+.background-peach {
+ // background-color: #FF9C73;
+}
+
+.circle img,#activate img{
+    border-radius: 50%;
+}
+
+
+
+.inner-wheel{border: 1px solid rgba(204, 204, 204, 0.5); 
+             border-radius:50%; 
+			 width:260px; 
+			 height:260px; 
+			 position: relative;
+			 margin:0 auto; 
+			 margin-top:6%; 
+			 z-index:-1;}
+			 
+.count-cont{position: absolute; 
+            width: 20%; 
+			background: green; 
+			border-radius: 50%; 
+			margin: -70% auto 0px 60%; 
+			font-size: 10px; 
+			color: rgb(255, 255, 255);}
+
+.mask{font-size: 12px; text-align: center; margin-left: -100%;}

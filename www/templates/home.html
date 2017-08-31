@@ -1,0 +1,164 @@
+<ion-view view-title="<img class='title-image' src='img/familykool-logo.png' />" hide-nav-bar="true">
+    
+  <div class="fk-theme-color"><img class='title-image familykool-logo-top' src='img/familykool-logo.png' /></div>
+  
+  <ion-content style="margin-top:25%;">
+ 
+
+    <div id="ionic-wheel"> 
+       <div style="height:50px;" id="activate" ng-click="showCircles()" ><img style="height:100%" src="http://siliconvalleynest.com/familykoolapi/uploaddata/profile/{{mypic}}"> 
+            <!--circle menu start-->
+             <span class="circle-top-icon" ng-click="redirectMap()"><img src="./img/map.png" style="width:100%;"/></span>
+            <span class="ion-home circle-home-icon" ng-click="reloadHome()"></span>
+           <span class="ion-navicon circle-right-icon" ng-click="toggleLeftSideMenu()"></span>
+           
+          
+           <!--circle menu end-->
+       </div> 
+       <div class="circle" id="thumb-{{relative.userId}}"  ng-click="moveToCenter({{relative.userId}})" ng-repeat="relative in relatives" style="top:45%;left:45%;" > <img style="height:100%" title="{{relative.firstName}}" src="http://siliconvalleynest.com/familykoolapi/uploaddata/profile/{{relative.userPicture}}">     
+                 <div class="mask"> 
+                     <span class="photo-relation hide">Relation</span> 
+                     <span class="photo-name">{{relative.firstName}}</span> 
+                     <span class="count-cont hide">2</span>
+                 </div>  
+       </div>
+        <div class="inner-wheel"></div>
+      
+    </div>
+   
+   
+   
+   
+     <div style="clear:both;padding-top:10px;display:none" id="mycurlocation">Location: {{geolocation}} </div>
+      
+      <!-- input section start-->
+    <div style="display:block" class="hm-post-cont">
+
+      <div class="item item-input-inset">
+        <label class="item-input-wrapper">
+            <input type="text" ng-model="messageData.message" placeholder="Write text here..">
+        </label>
+        <button class="button button-small ion-camera camerasize" menu-toggle="right" ng-click="getPostPicture()"   >
+         
+        </button>
+          <button class="button button-small calm" ng-click="addPost()"  >
+          Post
+        </button>
+      </div>
+    
+    </div>
+    
+    <!--input section end-->
+    
+    <!--Album & Posting Container Start-->
+    
+    <div style="display:block" class="album-posting-cont-wrap">
+    
+    	<div class="album-posting-cont">
+        
+        	<!--left container start--
+            <div class="album-cont">
+            	<div class="album-div">Album 1</div>
+                <div class="album-div">Album 1</div>
+                <div class="album-div">Album 1</div>
+            </div>
+            <!--left container end-->
+            
+            <!--right container start-->
+            <div class="posting-cont-hm" ng-init="getPosts();commentshow=false;" >
+              
+                <!--
+                <div id="msg_container">   
+                 
+                    <div ng-repeat="msg in messages"> 
+                        <span style="font-size:9">Posted on : {{msg.created}} by {{msg.firstName}} wrote : </span> 
+                        <span  style="font-size:10"> {{msg.message}} </span>
+                        <hr>
+                    </div>
+                
+                </div> 
+                
+            	 <div class="posting-div"><img src="./img/hd-cartoon-baby.jpg" width="100%" /></div>
+                 <div class="posting-div"><img src="./img/hd-cartoon-baby.jpg" width="100%" /></div>
+                 <div class="posting-div-last"><img src="./img/hd-cartoon-baby.jpg" width="100%" /></div>-->
+                
+                
+                
+                   <!--home posting div start-->
+            	 <div   ng-repeat="msg in messages" class="posting-div-hm">
+                    <div id="post-title">
+                       <img id="post-img" src="http://siliconvalleynest.com/familykoolapi/uploaddata/profile/{{msg.userPicture}}" class="hm-post-title-img" />
+                       <p class="hm-post-title-name">{{msg.firstName}}</p>
+                       <p class="hm-post-title-date">{{msg.created}}</p>
+                       <div class="clearfix"></div>
+                    </div>
+                    <div id="post-content">
+                      <p id="post-text">{{msg.message}}</p>  
+                      <img ng-if="msg.media" id="post-img" src="http://siliconvalleynest.com/familykoolapi/uploaddata/media/{{msg.media}}" width="100%" />
+                     
+                    </div>
+                    
+                    <div class="button-bar hm-pst-btn-bar" ng-init="" >
+                          <a class="button button-balanced ion-thumbsup hm-pst-btn" ng-click="addLike({{msg.id}})"> Like <span id='like-{{msg.id}}'>0</span></a> 
+                          <a class="button button-positive ion-chatbox hm-pst-btn" ng-click="showComments({{msg.id}})"> Comments <span id="post-comment-number-{{msg.id}}" ng-bind-html="commentsData.number"></span></a>
+                          <a class="button button-calm ion-plus hm-pst-btn"  ng-click="openSelectAlbumModal({{msg.id}})"> Add to Album</a>
+                          
+                    </div> 
+                     
+            <div class="comment-list-container" style="display: none;border-radius: 3px;border:1px solid #ccc;margin-top: 5px;padding:5px;width: 100%; height:auto;"  id="comment-container-{{msg.id}}"> 
+                     
+                         
+                          <!-- input section start-->
+                                <div style="display:block" class="hm-post-cont">
+
+                                  <div class="item item-input-inset" style="border-radius: 2px;" >
+                                    <label class="item-input-wrapper" >
+                                        <input type="text" size="10" ng-model="commentsData.comment" placeholder="Write comments here..">
+                                    </label>
+                                      <button style="display: none" class="button button-small ion-camera camerasize" ng-click="postCommentWithPic({{msg.id}})"   > </button>
+                                        <button class="button button-small calm" ng-click="postComment({{msg.id}})"  >
+                                         Post
+                                       </button>
+                                  </div>
+
+                                </div>
+    
+    <!--input section end-->
+                <div style="width: 100%;overflow: auto;height: 150px !important;">
+                 <div class="comments-msg-container"  ng-repeat="comment in comments" style="overflow: auto" >
+                   <div id="comment-title">
+                       <img id="post-img" src="http://siliconvalleynest.com/familykoolapi/uploaddata/profile/{{comment.userPicture}}" class="hm-post-title-img" />
+                       <p class="hm-post-title-name">{{comment.firstName}}</p>
+                       <p class="hm-post-title-date">{{comment.created}}</p>
+                       <div class="clearfix"></div>
+                    </div>
+                    <div id="comment-content">
+                      <p id="post-text">{{comment.msg}}</p>  
+                      
+                    </div>
+    
+                  </div>
+                </div>            
+                     
+             </div>
+                    
+       </div>
+                 <!--home posting div end-->
+                 
+                 
+                                
+                
+                
+                
+            </div>
+            <!--right container end-->
+            <div class="clearfix"></div>
+        
+        </div>
+    
+    </div>
+    
+    <!--Album & Posting Container End-->
+   
+  </ion-content>
+</ion-view>

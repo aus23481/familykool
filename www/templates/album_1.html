@@ -1,0 +1,113 @@
+<ion-view view-title="Album">
+    
+
+  <ion-content>
+ 
+
+      
+      <!-- input section start--
+    <div style="display:block" class="hm-post-cont">
+
+      <div class="item item-input-inset">
+        <label class="item-input-wrapper">
+          <input type="text" placeholder="Write text here..">
+        </label>
+        <button class="button button-small">
+          Browse
+        </button>
+        <button class="button button-small calm">
+          Post
+        </button>
+      </div>
+    
+    </div>
+    
+    !--input section end-->
+    
+    <!--Album & Posting Container Start-->
+    
+    <div style="display:block" class="album-posting-cont-wrap" ng-init="getAlbumList()">
+    
+    	<div class="album-posting-cont">
+        
+        	<!--left container start-->
+            <div class="album-cont">
+                
+                <div class="album-div" ng-repeat="album in albumlist" ng-click="showAlbumPics({{album.id}})"   > {{album.name}}  </div>
+              
+            </div>
+            <!--left container end-->
+            
+            <!--right container start-->
+            <div class="posting-cont">
+                 <!--album posting div start-->
+            	 <div class="posting-div">
+                    <div id="post-title">
+                       <img id="post-img" src="./img/sabbir.jpg" class="album-post-title-img" />
+                       <p class="album-post-title-name">Sabbir Ahmed</p>
+                       <p class="album-post-title-date">5 hours ago</p>
+                       <div class="clearfix"></div></div>
+                    <div id="post-content">
+                      <img id="post-img" src="./img/hd-cartoon-baby.jpg" width="100%" />
+                      <p id="post-text">At this era where we’re standing, we can say that Artificial Intelligence is a miracle invention of human brains.  We will be able to depend on it</p>
+                    </div>
+                    <div class="button-bar album-pst-btn-bar" ng-init="">
+                          <a class="button button-balanced ion-thumbsup album-pst-btn" ng-click=""> Like</a> 
+                          <a class="button button-positive ion-chatbox album-pst-btn" ng-click=""> Comments</a>
+                          <a class="button button-calm ion-forward album-pst-btn"  ng-click=""> Share</a>
+                          
+                    </div>
+                 </div>
+                 <!--album posting div end-->
+                 
+                 <!--album posting div start-->
+            	 <div class="posting-div">
+                    <div id="post-title">
+                       <img id="post-img" src="./img/sabbir.jpg" class="album-post-title-img" />
+                       <p class="album-post-title-name">Sabbir Ahmed</p>
+                       <p class="album-post-title-date">5 hours ago</p>
+                       <div class="clearfix"></div></div>
+                    <div id="post-content">
+                      <img id="post-img" src="./img/hd-cartoon-baby.jpg" width="100%" />
+                      <p id="post-text">At this era where we’re standing, we can say that Artificial Intelligence is a miracle invention of human brains.  We will be able to depend on it</p>
+                    </div>
+                    <div class="button-bar album-pst-btn-bar" ng-init="">
+                          <a class="button button-balanced ion-thumbsup album-pst-btn" ng-click=""> Like</a> 
+                          <a class="button button-positive ion-chatbox album-pst-btn" ng-click=""> Comments</a>
+                          <a class="button button-calm ion-forward album-pst-btn"  ng-click=""> Share</a>
+                          
+                    </div>
+                 </div>
+                 <!--album posting div end-->
+                 
+                 <!--album posting div start-->
+            	 <div class="posting-div-last">
+                    <div id="post-title">
+                       <img id="post-img" src="./img/sabbir.jpg" class="album-post-title-img" />
+                       <p class="album-post-title-name">Sabbir Ahmed</p>
+                       <p class="album-post-title-date">5 hours ago</p>
+                       <div class="clearfix"></div></div>
+                    <div id="post-content">
+                      <img id="post-img" src="./img/hd-cartoon-baby.jpg" width="100%" />
+                      <p id="post-text">At this era where we’re standing, we can say that Artificial Intelligence is a miracle invention of human brains.  We will be able to depend on it</p>
+                    </div>
+                    <div class="button-bar album-pst-btn-bar" ng-init="">
+                          <a class="button button-balanced ion-thumbsup album-pst-btn" ng-click=""> Like</a> 
+                          <a class="button button-positive ion-chatbox album-pst-btn" ng-click=""> Comments</a>
+                          <a class="button button-calm ion-forward album-pst-btn"  ng-click=""> Share</a>
+                          
+                    </div>
+                 </div>
+                 <!--album posting div end-->
+            </div>
+            <!--right container end-->
+            <div class="clearfix"></div>
+        
+        </div>
+    
+    </div>
+    
+    <!--Album & Posting Container End-->
+   
+  </ion-content>
+</ion-view>

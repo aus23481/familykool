@@ -1,0 +1,4 @@
+http://gonehybrid.com/how-to-write-automated-tests-for-your-ionic-app-part-2/
+
+Auto Completed box: https://github.com/guylabs/ion-autocomplete#installation
+

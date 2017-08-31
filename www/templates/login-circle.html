@@ -1,0 +1,107 @@
+<ion-view view-title="<img class='title-image' src='img/familykool-logo.png' />" hide-nav-bar="true" >
+   <ion-content>
+    
+    <div class="fk-theme-color"><img class='title-image familykool-logo-top' src='img/familykool-logo.png' /></div>
+     
+    <!--Login circle start-->
+    
+    <div class="album-circle-contaner">
+    
+        <!--Photo album circle container start ng-controller="PopupCtrl"  -->
+        <div class="photo-album-circle-contaner"  >
+          <img src="img/circle-bg.png">
+          
+         
+
+          <div id="#2"  ng-controller="FbCtrl">
+              <a href="#">
+              <div class="photo-display-leftmiddle" ng-click="facebookSignIn()" >
+                  <img src="img/facebook-icon.png">  
+                 
+              </div></a>
+          </div>
+          <!--
+          <div id="#3">
+              
+              <div class="photo-display-leftmiddle"  ng-click="showLeft()">
+                 <img src="img/twitter-icon.png">
+                 
+              </div>
+          </div> -->
+          
+          <div id="#4">
+           
+              <div class="photo-display-rightmiddle" style="cursor:pointer"  ng-click="login()" >
+                   <img src="img/login-center.jpg">
+                 <!-- <img src="img/user-icon.png"> -->
+                 
+              </div>
+          </div>
+          <!-- 
+          <div id="#5">
+              
+              <div class="photo-display-bottommiddle"  ng-click="showAlert()">
+                 <img src="img/google-plus-icon.png">
+                 
+              </div>
+          </div> -->
+          
+          <!--
+          <div id="#1">
+              
+              <div class="photo-display-topleft">
+                 <img src="img/1.jpg">
+                   
+              </div>          
+          </div>
+          
+          
+          <div id="#6">
+              
+              <div class="photo-display-topright">
+                 <img src="img/6.jpg">
+                 
+              </div>
+          </div>
+          
+          <div id="#7">
+              
+              <div class="photo-display-bottomleft">
+                 <img src="img/7.jpg">
+                 
+              </div>
+              
+          </div>
+          
+          <div id="#8">
+              
+              <div class="photo-display-bottomright">
+                 <img src="img/8.jpg">
+              </div>
+              
+          </div>-->
+          
+          <div style="display: block" id="#center">
+              
+              <div style="background:none" class="photo-display-middle login-circle">
+                  <img src="img/familykool-icon-new.png">
+              </div>
+              
+          </div>
+          
+          
+        </div>
+        <!--Photo album circle container end-->
+    
+    </div>
+    <!--Login circle end-->
+    
+    <!--<div ng-controller="PopupCtrl">
+    <button class="button button-dark" ng-click="showAlert()">Sample Alert</button><img  ng-click="showAlert()" src="img/9.jpg">
+
+    </div>
+-->    
+
+
+  </ion-content>
+</ion-view>

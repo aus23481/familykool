@@ -1,0 +1,67 @@
+<ion-view view-title="FamilyKool">
+  <ion-content>
+   <!-- <ion-list>
+      <ion-item ng-repeat="playlist in playlists" href="#/app/playlists/{{playlist.id}}">
+        {{playlist.title}}
+      </ion-item>
+    </ion-list> -->
+  
+   <div id="ionic-wheel"> 
+       <div id="activate" ng-click="showCircles()" ><img src="img/{{mypic}}"> </div>  
+       <div class="circle" id="thumb-{{thumb.id}}"  ng-click="moveToCenter({{thumb.id}})" ng-repeat="thumb in thumblists"> <img src="img/{{thumb.id}}.jpg">   </div>
+   </div>
+   
+   
+   
+   
+      
+      <!-- input section start-->
+    <div style="display:block" class="hm-post-cont">
+
+      <div class="item item-input-inset">
+        <label class="item-input-wrapper">
+          <input type="text" placeholder="Write text here..">
+        </label>
+        <button class="button button-small">
+          Browse
+        </button>
+        <button class="button button-small calm">
+          Post
+        </button>
+      </div>
+    
+    </div>
+    
+    <!--input section end-->
+    
+    <!--Album & Posting Container Start-->
+    
+    <div style="display:block" class="album-posting-cont-wrap">
+    
+    	<div class="album-posting-cont">
+        
+        	<!--left container start-->
+            <div class="album-cont">
+            	<div class="album-div">Album 1</div>
+                <div class="album-div">Album 1</div>
+                <div class="album-div">Album 1</div>
+            </div>
+            <!--left container end-->
+            
+            <!--right container start-->
+            <div class="posting-cont">
+            	 <div class="posting-div"><img src="./img/hd-cartoon-baby.jpg" width="100%" /></div>
+                 <div class="posting-div"><img src="./img/hd-cartoon-baby.jpg" width="100%" /></div>
+                 <div class="posting-div-last"><img src="./img/hd-cartoon-baby.jpg" width="100%" /></div>
+            </div>
+            <!--right container end-->
+            <div class="clearfix"></div>
+        
+        </div>
+    
+    </div>
+    
+    <!--Album & Posting Container End-->
+   
+  </ion-content>
+</ion-view>

@@ -1,0 +1,22 @@
+PrjectNumber:app-push-1298
+Key: AIzaSyAPG-gwbKoTphUSZ9jQG1KPoKTeEua9YLI
+ID: app-push-1298 (#978891996075) 
+
+ionic push --google-api-key AIzaSyAPG-gwbKoTphUSZ9jQG1KPoKTeEua9YLI
+
+ionic config set gcm_key 978891996075
+
+Device token: DEV-f5780143-89d0-4be0-a529-abe61d216fd8
+
+DEV-39137842-1b7d-4db0-97c3-7489643c337a
+
+
+
+https://devdactic.com/ionic-push-notifications/
+
+https://apps.ionic.io/apps
+
+keytool -exportcert -alias androiddebugkey -keystore ~/.android/debug.keystore | "C:\openssl\bin\openssl.exe" sha1 -binary | "C:\openssl\bin\openssl.exe" base64
+
+
+<preference name="AndroidPersistentFileLocation" value="Compatibility" />

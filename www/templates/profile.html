@@ -1,0 +1,51 @@
+<ion-view view-title="Profile" >
+    
+  <ion-content >
+      <div ng-controller="HomeCtrl">   
+      <div  class="button-bar headertopdown" ng-init="profile=true;" >
+          
+         
+          <a class="button button-assertive" ng-click="profile=true;" >Profile</a> 
+         
+          <a class="button button-energized"  ng-click="backToHome()">Close</a>
+          
+     </div> 
+      <p>&nbsp;</p> 
+      
+      <form ng-show="profile">
+      <div class="list">
+          
+        <label class="item item-input">
+          <span class="input-label">Username</span>
+          <input type="text" ng-model="loggedinusername"> 
+        </label>
+         
+        <label class="item item-input">
+          <span class="input-label">Phone</span>
+          <input type="text" ng-model="loggedinuserphone"> 
+        </label>
+        
+          <label class="item item-input">
+          <span class="input-label">Email</span>
+          <input type="text" id="loggedinuseremail" ng-model="loggedinuseremail">
+          </label>
+          
+          
+     
+          
+          
+          
+        <label class="item">
+          
+          <button class="button button-block button-positive"  ng-click="updateProfile()" type="button">Update Profile</button>
+        </label>
+      </div>
+           
+    </form>   
+      
+      
+    
+     
+   </div> 
+  </ion-content>
+</ion-view>

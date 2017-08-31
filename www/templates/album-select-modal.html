@@ -1,0 +1,29 @@
+<ion-view  hide-nav-bar="true"  >
+    
+  <ion-content>
+     
+      
+      <form  >
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Album Name</span>
+          <select ng-model="albumData.name">
+              <option> Template11 </option>
+               <option> Template12 </option>
+          </select>
+        </label>
+         
+       
+        <div style="float:left">
+          
+                <button style="width: 100px !important;float:left" class="" ng-click="addPostToAlbum()" type="button">Add</button>
+                <button style="width: 100px !important;float:left"  class="" ng-click="closeSelectPostAlbumPopup()"  type="button">Close</button>
+          
+        </div>
+      </div>
+    </form>   
+      
+      
+    
+  </ion-content>
+</ion-view>

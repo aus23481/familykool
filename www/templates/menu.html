@@ -1,0 +1,80 @@
+<ion-side-menus enable-menu-with-back-views="true">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-stable">
+     <!-- <ion-nav-back-button></ion-nav-back-button> -->
+      
+      
+        <ion-nav-buttons side="left">
+            <button class="button icon-left ion-home header-hm-btn" ng-click="reloadHome()" ></button> 
+        </ion-nav-buttons>   
+      <ion-nav-buttons side="right">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="right">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar> 
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="right">
+    <ion-header-bar class="bar-stable">
+      <h1 class="title"><img class='title-image right-sidebar-logo' src='img/familykool-logo.png' /></h1>
+    </ion-header-bar>
+    <ion-content>
+      <ion-list>
+      
+        <ion-item menu-close href="#/app/home" class="right-menu-txt">
+         <span class="ion-home right-menu-icon"></span> Home
+        </ion-item>
+         
+         <ion-item menu-close href="#/app/cprofile" class="right-menu-txt">
+         <span class="ion-ios-camera right-menu-icon"></span> Update Profile Picture
+        </ion-item>     
+          
+          <ion-item menu-close href="#/app/profile" class="right-menu-txt">
+         <span class="ion-person right-menu-icon"></span>Update Profile
+        </ion-item>  
+        
+           <ion-item menu-close href="#/app/addfamilymember" class="right-menu-txt">
+         <span class="ion-person right-menu-icon"></span>Add Family Member
+        </ion-item>  
+         
+        <!--<ion-item menu-close ng-click="login()">
+          Login
+        </ion-item> -->
+        
+         <ion-item menu-close href="#/app/albumsettings" class="right-menu-txt">
+         <span class="ion-settings right-menu-icon"></span>Create Album 
+        </ion-item>
+      
+        <ion-item menu-close href="#/app/album" class="right-menu-txt">
+         <span class="ion-ios-albums right-menu-icon"></span>My Albums
+        </ion-item>
+        
+        
+        <ion-item menu-close href="#/app/cognition" class="right-menu-txt">
+         <span class="ion-ios-albums right-menu-icon"></span>Selfie Analyzer
+        </ion-item>
+        
+         <ion-item menu-close href="#/app/notifications" class="right-menu-txt">
+         <span class="ion-ios-albums right-menu-icon"></span>Notifications
+        </ion-item>
+        
+         <!--
+         <ion-item menu-close href="#/app/facebook" class="right-menu-txt">
+         <span class="ion-ios-albums right-menu-icon"></span>Facebook Connect
+        </ion-item>
+       
+       
+        <ion-item menu-close href="#/app/login-circle">
+          Login
+        </ion-item>
+        -->
+       
+        
+         <ion-item menu-close ng-click="logout()" class="right-menu-txt">
+         <span class="ion-log-out right-menu-icon"></span> Logout
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

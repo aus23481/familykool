@@ -1,0 +1,22 @@
+
+cordova build --release android
+
+Copy to android-release-unsigned.apk to "C:\Program Files\Java\jdk1.7.0_79\bin" 
+Open CMD in administrator Mode
+cd to "C:\Program Files\Java\jdk1.7.0_79\bin"
+
+Run following command:
+
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.keystore android-release-unsigned.apk alias_name
+
+open "C:\Users\lenovo_pc\AppData\Local\Android\sdk\build-tools\23.0.1"
+copy apk from bin to "C:\Users\lenovo_pc\AppData\Local\Android\sdk\build-tools\23.0.1"
+
+cd "C:\Users\lenovo_pc\AppData\Local\Android\sdk\build-tools\23.0.1"
+
+Run following command:
+
+zipalign -v 4 android-release-unsigned.apk FamilyKool-Signed-0.0.9.apk
+
+
+tail -n 300 error_log-20160525 | more

@@ -1,0 +1,52 @@
+<ion-view view-title="<img class='title-image' src='img/familykool-logo.png' />" hide-nav-bar="true"  >
+   <ion-content>
+      <img class='title-image familykool-logo-top' src='img/familykool-logo.png' />
+      <span style="text-align: center !important;padding-left: 8px !important;">&nbsp;&nbsp;Detection of {{select.detail}} </span>
+     <div class="row">    
+      <div class="col"> 
+          <select ng-model="select.input" ng-change="uidesc()">
+              
+               <option value="emotion"> Emotion </option>
+               <option value="face"> Face </option>
+               <option value="vision"> Vision </option>
+              
+          </select>
+      
+      </div>
+         <div class="col" ng-controller="CognitionCtrl">
+             <button class="button icon-left ion-reload" ng-click="reload()" >Reload</button>
+         </div> 
+          <div class="col" ng-controller="CognitionCtrl">
+             <button class="button icon-left ion-home1" ng-click="GoToHome()" >Home</button>
+         </div>   
+         
+     </div>   
+        
+     <div class="row">
+      <div class="col" style="font-size:100px;text-align: center">
+        <a ng-hide="progress" style="cursor: pointer;" ng-click="selielyze()"><i class="icon ion-ios-camera larger"></i></a>
+        <ion-spinner ng-show="progress" icon="lines"></ion-spinner>
+      </div>
+    </div> 
+      
+      <div  ng-hide="progress" style="text-transform: uppercase"  >
+          
+                <div  class="row title "  ng-show="expression"  >{{expression}}</div>
+                <div  class="row title" ng-show="age"> Age: {{age}}</div>
+                <div class="row title"  ng-show="gender"> Gender: {{gender}}</div>   
+                <div class="row title" ng-show="text"> Desc: {{text}}</div>   
+                <div class="row title">
+                 <img data-ng-src="{{imgURI}}" class="selfie" width="256px" height="300px"/>
+                </div>
+                <div class="row " ng-show="glasses"> Glasses: {{glasses}}</div>    
+
+        </div>
+          
+          
+          
+     
+    
+  </ion-content>
+</ion-view>
+
+

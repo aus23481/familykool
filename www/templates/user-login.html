@@ -1,0 +1,81 @@
+<ion-view view-title="<img class='title-image' src='img/familykool-logo.png' />" hide-nav-bar="true"  >
+    
+  <ion-content>
+     
+      <div class="fk-theme-color"><img class='title-image familykool-logo-top' src='img/familykool-logo.png' /></div>
+      
+      <div class="tabs-striped tabs-top tabs-background-positive tabs-color-light">
+       <div class="tabs" ng-init="login=true;register=false;" style="margin-top: 3%">
+          <a id="hometab" class="tab-item active" ng-click="login=true;register=false;userloginTab('hometab');">
+            <i class="icon ion-android-lock"></i>
+            Home
+          </a>
+          <a id="logintab" class="tab-item" ng-click="login=false;register=true;userloginTab('logintab');">
+            <i class="icon ion-person-add"></i>
+            Login
+          </a>
+          <a class="tab-item" ng-click="closeLogin()">
+            <i class="icon ion-home"></i>
+            Registrater
+          </a>
+        </div>
+      </div>
+      <!--<br> <br> <br>-->
+      <!--
+      <div  class="button-bar headertopdown" ng-init="login=true;register=false;">
+          <a class="button button-assertive headerbtn-active" ng-click="login=true;register=false;">Login</a> 
+          <a class="button button-positive" ng-click="login=false;register=true;">Register</a>
+          <a class="button button-energized"  ng-click="closeLogin()">Home</a>
+             
+     </div> 
+      -->
+      <p>&nbsp;</p> 
+      
+      <form  ng-show="login">
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Username</span>
+          <input type="text" ng-model="loginData.username"> 
+        </label>
+         
+        <label class="item item-input">
+          <span class="input-label">Phone</span>
+          <input type="text" ng-model="loginData.phone"> 
+        </label>
+        
+          <label class="item item-input">
+          <span class="input-label">Email</span>
+          <input type="text" ng-model="loginData.email">
+        </label>
+        <label class="item">
+          <button class="button button-block button-positive" ng-click="doLogin()" type="button">Log in</button>
+        </label>
+      </div>
+    </form>   
+      
+      
+      <form  ng-show="register" >
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Username</span>
+          <input type="text" ng-model="signupData.username">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Phone</span>
+          <input type="text" ng-model="signupData.phone">
+        </label>
+          
+          <label class="item item-input">
+          <span class="input-label">Email</span>
+          <input type="text" ng-model="signupData.email">
+        </label>
+        <label class="item">
+            <button class="button button-block button-positive" ng-click="doRegister()" type="button">Register</button>
+        </label>
+      </div>
+    </form>
+    
+  </ion-content>
+</ion-view>
+
+
